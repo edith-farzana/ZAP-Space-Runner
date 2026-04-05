@@ -22,9 +22,9 @@
     <section id="select-screen" class="screen screen-active">
       <div class="panel hero-panel">
         <p class="eyebrow">Pixel Space Adventure</p>
-        <h1>Choose Your Flying Hero</h1>
+        <h1>Choose Your Rocket</h1>
         <p class="lead">
-          Pick a character, launch into space, dodge danger, and chase the highest score of all time.
+          Pick a rocket from the sprite set, launch into deep space, dodge glowing hazards, and chase the all-time high score.
         </p>
         <div class="score-strip">
           <span>All-Time High Score</span>
@@ -33,22 +33,22 @@
       </div>
 
       <div class="character-grid">
-        <button class="character-card" data-character="spaceship" type="button">
-          <canvas class="character-preview" width="96" height="96" data-preview="spaceship"></canvas>
-          <span class="character-name">Spaceship</span>
-          <span class="character-copy">Balanced hull, quick reflexes.</span>
+        <button class="character-card" data-character="violet" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="violet"></canvas>
+          <span class="character-name">Violet Rocket</span>
+          <span class="character-copy">Bright pink engine glow with crystal trim.</span>
         </button>
 
-        <button class="character-card" data-character="rocket" type="button">
-          <canvas class="character-preview" width="96" height="96" data-preview="rocket"></canvas>
-          <span class="character-name">Rocket</span>
-          <span class="character-copy">Fast launch energy and bright flame.</span>
+        <button class="character-card" data-character="frost" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="frost"></canvas>
+          <span class="character-name">Ice Rocket</span>
+          <span class="character-copy">Cool blue hull with fast clean trails.</span>
         </button>
 
-        <button class="character-card" data-character="angel" type="button">
-          <canvas class="character-preview" width="96" height="96" data-preview="angel"></canvas>
-          <span class="character-name">Angel of God</span>
-          <span class="character-copy">Golden wings with celestial glow.</span>
+        <button class="character-card" data-character="solar" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="solar"></canvas>
+          <span class="character-name">Solar Rocket</span>
+          <span class="character-copy">Golden armor with a hot comet boost.</span>
         </button>
       </div>
 
@@ -81,13 +81,18 @@
         <div id="heart-container" class="heart-container" aria-label="Lives remaining"></div>
       </div>
 
+      <div id="encouragement-box" class="encouragement-box panel">
+        <span class="hud-label">Pilot Boost</span>
+        <strong id="encouragement-text">You got this.</strong>
+      </div>
+
       <div class="canvas-frame">
         <canvas id="game-canvas" width="960" height="540" aria-label="Space flying game"></canvas>
       </div>
 
       <div class="panel bottom-bar">
-        <span>Fly through rocks, satellites, dust clouds, and planets.</span>
-        <span>Stay alive and beat the record.</span>
+        <span>Dodge UFOs, portals, planets, asteroids, gems, shields, hourglasses, alien eyes, and enemy ships.</span>
+        <span>Boost through the star lane and survive the full icon storm.</span>
       </div>
 
       <div id="game-overlay" class="game-overlay hidden">
@@ -97,7 +102,7 @@
           <p id="overlay-summary">Your final score: 0</p>
           <div class="overlay-actions">
             <button id="restart-button" class="launch-button" type="button">Play Again</button>
-            <button id="back-button" class="secondary-button" type="button">Change Character</button>
+            <button id="back-button" class="secondary-button" type="button">Change Rocket</button>
           </div>
         </div>
       </div>
