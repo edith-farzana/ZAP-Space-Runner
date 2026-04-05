@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixel Space Sprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="space-backdrop">
+    <div class="nebula nebula-a"></div>
+    <div class="nebula nebula-b"></div>
+    <div class="starfield starfield-far"></div>
+    <div class="starfield starfield-mid"></div>
+    <div class="starfield starfield-near"></div>
+  </div>
+
+  <main class="app-shell">
+    <section id="select-screen" class="screen screen-active">
+      <div class="panel hero-panel">
+        <p class="eyebrow">Pixel Space Adventure</p>
+        <h1>Choose Your Flying Hero</h1>
+        <p class="lead">
+          Pick a character, launch into space, dodge danger, and chase the highest score of all time.
+        </p>
+        <div class="score-strip">
+          <span>All-Time High Score</span>
+          <strong id="menu-high-score">0</strong>
+        </div>
+      </div>
+
+      <div class="character-grid">
+        <button class="character-card" data-character="spaceship" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="spaceship"></canvas>
+          <span class="character-name">Spaceship</span>
+          <span class="character-copy">Balanced hull, quick reflexes.</span>
+        </button>
+
+        <button class="character-card" data-character="rocket" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="rocket"></canvas>
+          <span class="character-name">Rocket</span>
+          <span class="character-copy">Fast launch energy and bright flame.</span>
+        </button>
+
+        <button class="character-card" data-character="angel" type="button">
+          <canvas class="character-preview" width="96" height="96" data-preview="angel"></canvas>
+          <span class="character-name">Angel of God</span>
+          <span class="character-copy">Golden wings with celestial glow.</span>
+        </button>
+      </div>
+
+      <div class="panel action-panel">
+        <div class="controls-list">
+          <span><kbd>Up</kbd> / <kbd>Down</kbd> to steer</span>
+          <span><kbd>Right Arrow</kbd> to speed up</span>
+        </div>
+        <button id="start-button" class="launch-button" type="button">Launch Mission</button>
+      </div>
+    </section>
+
+    <section id="game-screen" class="screen">
+      <div class="hud hud-left panel">
+        <div class="hud-block">
+          <span class="hud-label">Score</span>
+          <strong id="score-value">0</strong>
+        </div>
+        <div class="hud-block">
+          <span class="hud-label">Speed</span>
+          <strong id="speed-value">100%</strong>
+        </div>
+      </div>
+
+      <div class="hud hud-right panel">
+        <div class="hud-block">
+          <span class="hud-label">High Score</span>
+          <strong id="hud-high-score">0</strong>
+        </div>
+        <div id="heart-container" class="heart-container" aria-label="Lives remaining"></div>
+      </div>
+
+      <div class="canvas-frame">
+        <canvas id="game-canvas" width="960" height="540" aria-label="Space flying game"></canvas>
+      </div>
+
+      <div class="panel bottom-bar">
+        <span>Fly through rocks, satellites, dust clouds, and planets.</span>
+        <span>Stay alive and beat the record.</span>
+      </div>
+
+      <div id="game-overlay" class="game-overlay hidden">
+        <div class="panel overlay-card">
+          <p class="eyebrow">Mission Report</p>
+          <h2 id="overlay-title">Game Over</h2>
+          <p id="overlay-summary">Your final score: 0</p>
+          <div class="overlay-actions">
+            <button id="restart-button" class="launch-button" type="button">Play Again</button>
+            <button id="back-button" class="secondary-button" type="button">Change Character</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
